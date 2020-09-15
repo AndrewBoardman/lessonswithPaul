@@ -41,4 +41,26 @@ class DeckTest {
     void maxCard() {
         assertEquals(10, deck.maxCard().getValue());
     }
+
+    @Test
+    void pop() {
+        assertEquals(7, deck.size());
+        assertEquals(4, deck.popCard().getValue());
+        assertEquals(6, deck.size());
+        assertEquals(6, deck.popCard().getValue());
+        assertEquals(5, deck.size());
+        assertEquals(1, deck.popCard().getValue());
+        assertEquals(4, deck.size());
+        assertEquals(10, deck.popCard().getValue());
+        assertEquals(3, deck.size());
+        assertEquals(5, deck.popCard().getValue());
+        assertEquals(2, deck.size());
+        assertEquals(3, deck.popCard().getValue());
+        assertEquals(1, deck.size());
+        assertEquals(2, deck.popCard().getValue());
+        assertEquals(0, deck.size());
+        assertNull(deck.popCard());
+        assertEquals(0, deck.size());
+
+    }
 }

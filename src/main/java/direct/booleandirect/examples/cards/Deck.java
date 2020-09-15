@@ -9,7 +9,7 @@ public class Deck {
 
     public void push(int value) {
         numberOfCards++;
-        var card = new Card(value);
+        var card = new Card(value, topCard);
         if (topCard == null) {
             minimumCard = card;
             maximumCard = card;
@@ -38,5 +38,16 @@ public class Deck {
 
     public Card maxCard() {
         return maximumCard;
+    }
+
+    public Card popCard() {
+        if (topCard == null) {
+            return null;
+        }
+
+        numberOfCards--;
+        var card = topCard;
+        topCard = card.getPrevCard();
+        return card;
     }
 }

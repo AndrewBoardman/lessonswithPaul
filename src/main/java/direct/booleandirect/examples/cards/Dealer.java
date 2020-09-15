@@ -8,6 +8,7 @@ public class Dealer {
         BAGGS.push(4);
         BAGGS.push(1);
         BAGGS.push(6);
+        BAGGS.push(20);
         BAGGS.push(2);
         BAGGS.push(3);
 
